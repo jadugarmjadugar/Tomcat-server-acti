@@ -1,0 +1,29 @@
+#Commands to access tomcat server on other servers
+
+ cd webapps
+ ls
+ cd host-manager/
+ ls
+ cd META-INF/
+ ls
+ vi context.xml
+ 
+ ################################################################################
+ ##   here comment the valve value line so it can available on all servers     ##
+ ##             https://www.youtube.com/watch?v=PU73QmFuiag                    ##
+ ################################################################################
+ 
+ cd ../../..
+ cd conf/
+ ls
+ vi tomcat-users.xml
+ 
+ #################################################################################
+ ##here edit the context file and add the users with manager-gui, admin-gui role##
+ #################################################################################
+
+ cd ..
+ cd bin/
+ ls
+ sh shutdown.sh
+ sh startup.sh
